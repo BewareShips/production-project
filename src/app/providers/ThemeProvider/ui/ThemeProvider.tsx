@@ -1,5 +1,9 @@
 import React, { FC, useMemo, useState } from "react";
-import { LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext } from "./ThemeContext";
+import {
+   LOCAL_STORAGE_THEME_KEY,
+   Theme,
+   ThemeContext,
+} from "../lib/ThemeContext";
 
 const ThemeProvider: FC = ({ children }) => {
    const defaultTheme =
@@ -15,7 +19,6 @@ const ThemeProvider: FC = ({ children }) => {
       [theme]
    );
 
-  
    return (
       <ThemeContext.Provider value={defaultProps}>
          {children}
