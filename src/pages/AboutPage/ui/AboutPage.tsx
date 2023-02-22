@@ -1,6 +1,9 @@
+import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
 
-function AboutPage() {
+
+
+const AboutPage:FC = function () {
     const { t } = useTranslation('about');
     return (
       <div>
