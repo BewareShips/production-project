@@ -1,11 +1,12 @@
+/* eslint-disable no-unused-expressions */
 import webpack from 'webpack';
 import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 import { BuildOptions } from './types/config';
 
-export function buildPlugins({ paths, isDev }:BuildOptions):webpack.WebpackPluginInstance[] {
-    return [
+export function buildPlugins({ paths, isDev }: BuildOptions): webpack.WebpackPluginInstance[] {
+    const plugins = [
         new HTMLWebpackPlugin({
             template: paths.html,
         }),
@@ -17,9 +18,14 @@ export function buildPlugins({ paths, isDev }:BuildOptions):webpack.WebpackPlugi
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
         }),
-        // new webpack.HotModuleReplacementPlugin(),
-        new BundleAnalyzerPlugin({
-            openAnalyzer: false,
-        }),
     ];
+
+    if (isDev) {
+        plugins.push(new webpack.HotModuleReplacementPlugin());
+        plugins.push(new BundleAnalyzerPlugin({
+            openAnalyzer: false,
+        }));
+    }
+
+    return plugins;
 }
