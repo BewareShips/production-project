@@ -1,12 +1,7 @@
 import { useEffect, useState } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/Button/Button';
 
-interface BugButtonProps {
-   className?: string;
-}
-
-export const BugButton = ({ className }: BugButtonProps) => {
+export const BugButton = () => {
     const [errorBool, setErrorBool] = useState(false);
 
     const toThrow = () => setErrorBool(true);
