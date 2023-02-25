@@ -4,7 +4,7 @@ import { Button, ThemeButton } from './Button';
 describe('Button', () => {
     test('Test render', () => {
         render(<Button>TEST</Button>);
-        expect(screen.getByText('TEST')).toBeInTheDocument;
+        expect(screen.getByText('TEST')).toBeInTheDocument();
     });
 
     test('Test button class', () => {
