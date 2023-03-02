@@ -1,10 +1,11 @@
 {
   "Главная страница": "MainPage",
-  "О сайте": "",
+  "О сайте": "About us",
   "Перевод": "Translate",
   "Приветсвуем в реакте": "Welcome to react",
   "Язык": "Russian",
   "Страница не найдена": "Page not found",
   "Произошла непредвиденная ошибка":"An unexpected error has occurred",
-  "Обновить страницу":"Refresh the page"
+  "Обновить страницу":"Refresh the page",
+  "Короткий язык":"EN"
 }
