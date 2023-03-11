@@ -1,0 +1,56 @@
+.inputWrapper {
+    display: flex;
+}
+
+.placeholder {
+    margin-right: 5px;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    font-family: inherit;
+    border-radius: 6px;
+    border: 1px solid var(--inverted-bg-color);
+    color: var(--primary-color);
+    background: transparent;
+    transition: border 0.3s ease;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: var(--inverted-bg-color);
+    }
+}
+
+// .caretWrapper {
+//   flex-grow: 1;
+//   position: relative;
+// }
+
+// .caret {
+//   height: 3px;
+//   width: 9px;
+//   background: var(--primary-color);
+//   position: absolute;
+//   bottom: 0;
+//   left: 0;
+//   animation: blink 0.7s forwards infinite;
+// }
+
+// @keyframes blink {
+//   0% {
+//     opacity: 0;
+//   }
+
+//   50% {
+//     opacity: 0.01;
+//   }
+
+//   100% {
+//     opacity: 1;
+//   }
+// }
