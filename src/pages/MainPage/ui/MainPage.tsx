@@ -10,7 +10,7 @@ const MainPage:FC = function () {
         <div>
             {t('Главная страница')}
             <BugButton />
-            <Counter />
+            {/* <Counter /> */}
         </div>
     );
 };
