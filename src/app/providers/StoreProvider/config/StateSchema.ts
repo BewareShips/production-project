@@ -1,3 +1,4 @@
+import { ProfileSchema } from 'entities/Profile';
 /* eslint-disable no-unused-vars */
 import {
     AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
@@ -11,6 +12,7 @@ export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
   loginForm?: LoginSchema;
+  profile?: ProfileSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
