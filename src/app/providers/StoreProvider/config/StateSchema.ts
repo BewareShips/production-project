@@ -1,12 +1,13 @@
 import { ProfileSchema } from 'entities/Profile';
 /* eslint-disable no-unused-vars */
 import {
-    AnyAction, CombinedState, EnhancedStore, Reducer, ReducersMapObject,
+    AnyAction, Reducer, ReducersMapObject,
 } from '@reduxjs/toolkit';
+import { CombinedState } from 'redux';
 import { AxiosInstance } from 'axios';
 import { To } from 'history';
 import { NavigateOptions } from 'react-router';
-import { ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
+import { EnhancedStore, ToolkitStore } from '@reduxjs/toolkit/dist/configureStore';
 import { CounterSchema } from 'entities/Counter';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
@@ -27,7 +28,7 @@ export interface ReducerManager {
   remove: (key: StateSchemaKey) => void;
 }
 
-export interface ReduxStoreWithManager extends ToolkitStore<StateSchema> {
+export interface ReduxStoreWithManager extends EnhancedStore<StateSchema> {
   reducerManager: ReducerManager;
 }
 
